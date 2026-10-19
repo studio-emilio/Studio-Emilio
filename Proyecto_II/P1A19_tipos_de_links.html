@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usos de la Etiqueta &lt;a&gt;</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f3;
+            color: #000000;
+            padding: 20px;
+        }
+
+        section:hover h2 {
+    font-size: 24px; /* aumenta el tamaño del título */
+    transition: font-size 0.3s ease-in-out;
+    }
+
+        header{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            background-color: #5b94e8;
+            color: #fbfbfb;
+            border-radius: 6px 6px 0px 0px;
+            text-align: center;
+            padding: 12px;
+            text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
+        }
+
+        header p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            color: #fbfbfb;
+            background-color: #5b94e8;
+        }
+
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            background-color: #8cb7f7;
+            color: #fbfbfb;
+            padding: 12px;
+            margin-top: 12px;
+            border-radius: 6px 6px 0px 0px;
+        }
+
+        pre {
+        margin: 0;          /* elimina márgenes */
+        padding: 8px;       /* ajusta el relleno interno */
+        background-color: #f2f2eb;
+        color: #000000;
+        border-radius: 6px;
+        text-align: left;
+    }
+
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            margin-bottom: 12px;
+            background-color: #e4e4e4;
+            padding-left: 12px;
+        }
+
+
+        
+    
+        nav {
+        background-color: #f0f0f0;
+        text-align: center;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-radius: 0px 0px 6px 6px;
+        }
+    
+        nav a{
+        color: #333;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-bottom: 5px;
+        }
+    
+        nav a:hover {
+        color: #b0f2d2;
+        border-bottom: 2px solid #b0f2d2;
+        transition: color 0.9s, border-bottom 0.9s;
+        }
+
+        section:hover {
+    transform: scale(1.02);   /* agranda un 5% */
+    transition: transform 0.3s ease-in-out; /* animación suave */
+        }
+
+        ul{
+            background-color: #e4e4e4;
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            border-radius: 0px 0px 6px 6px;
+        }
+
+        footer{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-top: 4px solid #5b94e8;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explora el Mundo Digital</h1>
+        <p>
+            Practicas de aplicacion: Tipos de Enlaces y Atributos de la etiqueta 
+            <code>&lt;a&gt;</code>
+        </p>
+    </header>
+
+        <!-- Menu de Navegacion con marcadores de ancla internos -->
+        <nav>
+                <a href="#externos" title="Ir a Enlaces Externos">Enlaces Externos</a>
+                <a href="#email" title="Ir a Enlace de Correo">Enlace de Correo</a>
+                <a href="#descargar" title="Ir a Enlace de Descarga">Enlace de Descarga</a>
+                <a href="#resumen" title="Ir a Resumen">Resumen</a>
+                <a href="#HTML" title="Ir a otra Pagina">Otra Pagina</a>
+        </nav>
+
+        <!-- Seccion 1: Enlaces Externos. -->
+
+        <section id="externos">
+            <h2>Enlaces Externos</h2>
+            <p>
+                Los enlaces externos permiten dirigir al usuario a sitios fuera de nuestra pagina web.
+                Por ejemplo este enlace te llevara a
+            <a href="http://youtube.com" target="_blank" title="Visitar Youtube en una nueva
+            pestaña" rel="noopener noreferrer">Youtube</a>, un sitio ideal para consumir tutoriales e informacion
+            multimedia.
+            </p>
+            <pre>
+                <code>
+                    &lt;a href="http://youtube.com" target="_blank" title="Visitar Youtube en una nueva pestaña" rel="noopener noreferrer"&gt;Youtube&lt;/a&gt;
+                </code>
+            </pre>
+        </section>
+    
+        <!-- Seccion 2: Enlaces de correo electronico -->
+        <section id="email">
+            <h2>Enlace para Enviar Correo</h2>
+            <p>
+                Podemos crear un hipervinculo que ejecute la aplicacion de correo
+                predeterminada del usuario para enviar un mensaje directo, haz clic
+                en el siguiente enlace para redactar un correo a nuestro equipo:
+                <a href="mailto:equipo@mundodigital.com" title="Enviar Correo Electronico a equipo@mundodigital.com">
+                Enviar Correo Electronico</a>
+            </p>
+            <pre>
+                <code>
+                    &lt;a href="mailto:equipo@mundodigital.com" title="Enviar Correo Electronico a equipo@mundodigital.com"&gt; Enviar Correo Electronico&lt;/a&gt;
+                </code>
+            </pre>
+        </section>
+
+        <!-- Seccion 3: Enlace de Descarga -->
+        <section id="descargar">
+            <h2>Enlace para Descargar Archivos</h2>
+            <p>
+                Mediante el atributo <code>download</code>, indicamos al navegador que descargue un recurso
+                en lugar de abrirlo directamente. Haz clic para obtener un archivo de prueba:
+                <a href="Resource/Mi skibidi.pdf" download="Guia_Examenes.pdf" 
+                title="Descargar documento de estudio">Descargar Guia de Examen</a>
+            </p>
+
+            <pre>
+                <code>
+                    &lt;a href="Resource/Mi skibidi.pdf" download="Guia_Examenes.pdf"  title="Descargar documento de estudio"&gt;Descargar Guia de Examen&lt;/a&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section id="resumen">
+            <h2>Resumen de la etiqueta <code>&lt;a&gt;</code></h2>
+            <ul>
+                <li><strong>href</strong> Define la direccion URL, un marcador interno (<code>#id</code>), un
+                archivo o un protocolo (<code>mailto:</code>).</li>
+                <li><strong>target = "_blank"</strong> Indica que el recurso se debe abrir en una nueva pestaña.</li>
+                <li><strong>title = "..."</strong> Proporciona un texto informativo que aparece al posicionar el cursor 
+                sobre el enlace.</li>
+                <li><strong>rel = "noopener noreferrer"</strong> Aplica medidas de seguridad y privacidad especiales al usar
+                <code>target="_blank"</code>.</li>
+                <li><strong>download:</strong> Fuerza la descarga del archivo enlazado y permite renombrarlo opcionalmente.</li>
+            </ul>
+
+            <p>
+                Experimenta combinando estos atributos en tus propios maquetados web para conectar recursos
+                de forma interactiva y segura.
+            </p>
+        </section>
+
+        <section id="HTML">
+        <h2>Enlace para entrar a otra pagina</h2>
+            <p>
+                Da clic , te llevara a 
+                <a href="index.html" target="_blank" title="Enviar a otro trabajo">
+                Otro Trabajo</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>B. T. en Programacion &copy; 2026<br>
+            Desarrollado por: Emilio Enrique Oñate Flores.
+            </p>
+        </footer>
+</body>
+</html>
